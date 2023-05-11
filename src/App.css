@@ -1,0 +1,19 @@
+.name-from {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 30px;
+}
+
+.name--form {
+  padding: 10px 20px;
+}
+
+.update--name-btn {
+  padding: 10px 20px;
+   color: white;
+   font-size: 16px;
+   font-weight: bold;
+   background-color: rgb(55, 55, 219);
+   border: none;
+}

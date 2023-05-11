@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NameContextConsumer } from './themeContext'
 import './App.css'
 import Header from "./Header"
 
@@ -26,7 +26,17 @@ class App extends React.Component {
             onChange={this.handleChange}
             value={this.state.username}
           />
-          <button className="update--name-btn">Update Name</button>
+          <NameContextConsumer>
+            {
+              (context => {
+                return  <button 
+                className="update--name-btn"
+                onClick={() => {context.changeName(this.state.username)}}
+                >Update Name</button>
+              })
+            }
+          </NameContextConsumer>
+         
         </div>
       </div>
     )

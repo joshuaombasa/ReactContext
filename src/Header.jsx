@@ -1,18 +1,18 @@
 import React from "react";
-import {Consumer} from "./themeConext";
+import {NameContextConsumer} from "./themeContext";
 
 
 export default class Header extends React.Component {
   render() {
     return (
       <div className="top--section">
-        <Consumer>
+        <NameContextConsumer>
           {
             (context => {
-              return  <h1 className="title">Welcome to context {context}</h1>
+              return  <h1 className="title">Welcome to context {context.username}</h1>
             })
           }
-        </Consumer>
+        </NameContextConsumer>
       </div>
     )
   }
